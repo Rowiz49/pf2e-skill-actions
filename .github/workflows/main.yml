@@ -3,7 +3,9 @@ name: Release Creation
 on:
   release:
     types: [published]
-
+permissions:
+  contents: read
+  pull-requests: write
 jobs:
   build:
     runs-on: ubuntu-latest
