@@ -38,7 +38,7 @@ jobs:
       # Create a release for this specific version
       - name: Update Release with Files
         id: create_version_release
-        uses: ncipollo/release-action@cdcc88a9acf3ca41c16c37bb7d21b9ad48560d87
+        uses: ncipollo/release-action@v1
         with:
           allowUpdates: true # Set this to false if you want to prevent updating existing releases
           name: ${{ github.event.release.name }}
