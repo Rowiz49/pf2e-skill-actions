@@ -1,3 +1,6 @@
+/**
+ * List of all skill actions
+ */
 const actions = {
     "untrained": [
         "balance",
@@ -139,6 +142,8 @@ export async function addSkillActions(actor) {
 
         // Clone the action
         const newAction = action.toObject();
+        newAction.flags["pf2e-skill-actions"] = { added: true };
+
 
         return newAction;
     }));
