@@ -33,8 +33,8 @@ export function renderActionSubsection(actor, html) {
     if (!skillActionsList.children().length) return;
 
     // Insert the Skill Actions section before the Reactions section
-    freeActionsSection.before(header);
-    freeActionsSection.before(skillActionsList);
+    freeActionsSection.after(skillActionsList);
+    freeActionsSection.after(header);
 };
 
 /**
