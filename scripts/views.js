@@ -6,33 +6,35 @@ import { addSkillActions } from "./actionsCreator.js";
  * @param {*} html 
  */
 export function renderActionSubsection(actor, html) {
-    let reactionsHeader = html.find("header:contains('Reactions')");
+    let freeActionsSection = html.find("header:contains('Free Actions')").next("ol.actions-list");
 
-    if (reactionsHeader.length) {
-        // Create a new section for Skill Actions
-        let header = $(`
-                <header class="action-header">
-                    Skill Actions
-                </header>
-        `);
+    if (!freeActionsSection.length) return;
+    // Create a new section for Skill Actions
+    let header = $(`
+            <header class="action-header">
+                Skill Actions
+            </header>
+    `);
 
-        let skillActionsList = $(`<ol class="actions-list item-list directory-list"></ol>`);
+    let skillActionsList = $(`<ol class="actions-list item-list directory-list"></ol>`);
 
-        actor.items
-            .filter(item => item.flags["pf2e-skill-actions"])
-            .filter(item => !item.system.traits.value.includes("downtime") && !item.system.traits.value.includes("exploration"))
-            .forEach(action => {
-                // Find the corresponding <li> in the sheet
-                let actionElement = html.find(`li[data-item-id="${action.id}"]`).detach();
-                if (actionElement.length) {
-                    skillActionsList.append(actionElement);
-                }
-            });
+    actor.items
+        .filter(item => item.flags["pf2e-skill-actions"])
+        .filter(item => !item.system.traits.value.includes("downtime") && !item.system.traits.value.includes("exploration"))
+        .sort((a, b) => a.name.localeCompare(b.name))
+        .forEach(action => {
+            // Find the corresponding <li> in the sheet
+            let actionElement = html.find(`li[data-item-id="${action.id}"]`).detach();
+            if (actionElement.length) {
+                skillActionsList.append(actionElement);
+            }
+        });
+    
+    if (!skillActionsList.children().length) return;
 
-        // Insert the Skill Actions section before the Reactions section
-        reactionsHeader.before(header);
-        reactionsHeader.before(skillActionsList);
-    }
+    // Insert the Skill Actions section before the Reactions section
+    freeActionsSection.before(header);
+    freeActionsSection.before(skillActionsList);
 };
 
 /**

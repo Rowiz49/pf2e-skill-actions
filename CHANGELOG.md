@@ -1,3 +1,6 @@
+# 1.1.1
+- Moved the subsection to the bottom of the sheet
+- The skill action header now only shows when there is at least 1 skill action in it
 # 1.1.0
 - Separated skill actions from normal actions on the character sheet
 # 1.0.0
