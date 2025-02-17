@@ -3,6 +3,17 @@
  */
 const actions = {
     "untrained": [
+        "long term rest",
+        "retraining",
+        "avoid notice",
+        "follow the expert",
+        "hustle",
+        "investigate",
+        "scout",
+        "search",
+        "defend",
+        "detect magic",
+        "repeat a spell",
         "balance",
         "tumble through",
         "recall knowledge",

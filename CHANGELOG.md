@@ -1,3 +1,6 @@
+# 1.2.0
+- Fixed the placement of the subsection
+- Added some exploration and downtime activities that are untrained
 # 1.1.1
 - Moved the subsection to the bottom of the sheet
 - The skill action header now only shows when there is at least 1 skill action in it
