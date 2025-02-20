@@ -46,7 +46,7 @@ export function renderCreateActionButton(html, actor) {
     let header = html.find("header:contains('Core Skills')");
 
     if (header.length) {
-        header.append('<button class="automatic-action-creator"><span class="action-glyph">1</span></button>');
+        header.append('<button type="button" class="automatic-action-creator"><span class="action-glyph">1</span></button>');
         header.find(".automatic-action-creator").on("click", () => {
             addSkillActions(actor);
         });
