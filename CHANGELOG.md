@@ -1,3 +1,5 @@
+# 1.2.1
+- Fixed an issue where pressing enter would trigger action creation
 # 1.2.0
 - Fixed the placement of the subsection
 - Added some exploration and downtime activities that are untrained
