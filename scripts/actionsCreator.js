@@ -22,6 +22,7 @@ const actions = {
         "grapple",
         "high jump",
         "long jump",
+        "reposition",
         "shove",
         "swim",
         "trip",
