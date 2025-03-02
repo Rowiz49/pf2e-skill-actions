@@ -1,3 +1,5 @@
+# 1.2.2
+- Added the missing Reposition skill action.
 # 1.2.1
 - Fixed an issue where pressing enter would trigger action creation
 # 1.2.0
