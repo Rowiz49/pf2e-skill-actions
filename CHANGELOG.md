@@ -1,3 +1,5 @@
+# 1.2.3
+- Updated compatibility to v13
 # 1.2.2
 - Added the missing Reposition skill action.
 # 1.2.1
