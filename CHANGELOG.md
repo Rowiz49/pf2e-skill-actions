@@ -1,3 +1,5 @@
+# 1.3.1
+- Fix skill actions appearing everywhere
 # 1.3.0
 - Fix a conflict when using translations with Babele
 # 1.2.3
