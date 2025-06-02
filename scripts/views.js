@@ -7,7 +7,7 @@ import { addSkillActions } from "./actionsCreator.js";
  */
 export function renderActionSubsection(actor, html) {
   let freeActionsSection = html
-    .find("header:has(button[data-action-type='free'])")
+    .find("header:has(button[data-action-type='free']:not([data-traits]))")
     .next("ol.actions-list");
 
   if (!freeActionsSection.length) return;
