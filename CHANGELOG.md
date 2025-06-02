@@ -1,3 +1,5 @@
+# 1.3.0
+- Fix a conflict when using translations with Babele
 # 1.2.3
 - Updated compatibility to v13
 # 1.2.2
