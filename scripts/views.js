@@ -12,11 +12,13 @@ export function renderActionSubsection(actor, html) {
 
   if (!freeActionsSection.length) return;
   // Create a new section for Skill Actions
-  let header = $(`
-            <header class="action-header">
-                Skill Actions
-            </header>
-    `);
+  let header = $(
+    `
+            <header class="action-header">` +
+      game.i18n.localize("PF2ESKILLACTIONS.SkillActions") +
+      `</header>
+    `
+  );
 
   let skillActionsList = $(
     `<ol class="actions-list item-list directory-list"></ol>`

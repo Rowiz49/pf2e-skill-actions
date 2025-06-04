@@ -21,13 +21,24 @@
         "type": "system",
         "compatibility": {
           "minimum": "6.9.0",
-          "verified":"7.0.0"
+          "verified": "7.0.0"
         }
       }
     ]
   },
+  "languages": [
+    {
+      "lang": "es",
+      "name": "Spanish",
+      "path": "lang/es.json"
+    },
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
   "esmodules": ["scripts/hooks.js"],
-  "languages": [],
   "flags": {},
   "url": "",
   "manifest": "",

@@ -83,18 +83,24 @@ const actions = {
  */
 export async function addSkillActions(actor) {
   const skills = actor.system.skills;
-
+  console.log(skills);
   // Filter skills where rank is 1 (Trained) or higher
   const trainedSkills = Object.entries(skills)
     .filter(([key, skill]) => skill.rank >= 1)
     .map(([key, skill]) => `${skill.slug}`);
+
+  const trainedSkillsNames = Object.entries(skills)
+    .filter(([key, skill]) => skill.rank >= 1)
+    .map(([key, skill]) => `${skill.label}`);
 
   if (trainedSkills.length == 0) return;
 
   const compendium = game.packs.get("pf2e.actionspf2e");
 
   ui.notifications.info(
-    `Creating actions for trained Skills: ${trainedSkills.join(", ")}`
+    game.i18n.localize("PF2ESKILLACTIONS.ListSkillsMessage") +
+      " " +
+      trainedSkillsNames.join(", ")
   );
   let skillActions = new Set(actions.untrained);
   trainedSkills.forEach((skill) => {
@@ -119,7 +125,7 @@ export async function addSkillActions(actor) {
   );
 
   if (missingActions.length === 0) {
-    ui.notifications.info("All skill actions are already added.");
+    ui.notifications.info(game.i18n.localize("PF2ESKILLACTIONS.AlreadyAdded"));
     return;
   }
 
@@ -148,6 +154,10 @@ export async function addSkillActions(actor) {
   const validActions = actionsToAdd.filter((action) => action !== null);
   if (validActions.length > 0) {
     await actor.createEmbeddedDocuments("Item", validActions);
-    ui.notifications.info(`Added ${validActions.length} skill actions.`);
+    ui.notifications.info(
+      ui.notifications.info(
+        game.i18n.localize("PF2ESKILLACTIONS.NumberAdded")
+      ) + validActions.length
+    );
   }
 }
