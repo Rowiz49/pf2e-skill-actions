@@ -1,3 +1,5 @@
+# 1.4.1
+- Fixed v13 support
 # 1.4.0
 - Added support for localization
 - Added French and Spanish localization
