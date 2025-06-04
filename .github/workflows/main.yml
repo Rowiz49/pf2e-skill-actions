@@ -55,4 +55,4 @@ jobs:
           url: "https://api.foundryvtt.com/_api/packages/release_version/"
           method: "POST"
           customHeaders: '{"Content-Type": "application/json", "Authorization":"${{secrets.FOUNDRY_PACKAGE_RELEASE_TOKEN}}"}'
-          data: '{"id": "pf2e-skill-actions", "release": { "version": "${{github.event.release.tag_name}}", "manifest": "https://github.com/Rowiz49/pf2e-skill-actions/releases/download/${{github.event.release.tag_name}}/module.json", "notes": "https://github.com/Rowiz49/pf2e-skill-actions", "compatibility": {"minimum": "12","verified": "12","maximum": ""}}}'
+          data: '{"id": "pf2e-skill-actions", "release": { "version": "${{github.event.release.tag_name}}", "manifest": "https://github.com/Rowiz49/pf2e-skill-actions/releases/download/${{github.event.release.tag_name}}/module.json", "notes": "https://github.com/Rowiz49/pf2e-skill-actions", "compatibility": {"minimum": "12","verified": "13","maximum": ""}}}'
