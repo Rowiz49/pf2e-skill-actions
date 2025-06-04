@@ -1,3 +1,5 @@
+# 1.4.2
+- Added Polish (thanks @Lioheart !)
 # 1.4.1
 - Fixed v13 support
 # 1.4.0
