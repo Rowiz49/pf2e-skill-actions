@@ -1,3 +1,6 @@
+# 1.4.0
+- Added support for localization
+- Added French and Spanish localization
 # 1.3.1
 - Fix skill actions appearing everywhere
 # 1.3.0
