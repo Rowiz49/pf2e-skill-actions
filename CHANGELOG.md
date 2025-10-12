@@ -1,3 +1,5 @@
+# 1.4.3
+- Fixed button appearing on all headers
 # 1.4.2
 - Added Polish (thanks @Lioheart !)
 # 1.4.1
