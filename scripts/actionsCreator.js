@@ -155,9 +155,7 @@ export async function addSkillActions(actor) {
   if (validActions.length > 0) {
     await actor.createEmbeddedDocuments("Item", validActions);
     ui.notifications.info(
-      ui.notifications.info(
-        game.i18n.localize("PF2ESKILLACTIONS.NumberAdded")
-      ) + validActions.length
-    );
+      game.i18n.localize("PF2ESKILLACTIONS.NumberAdded") + validActions.length
+    ) 
   }
 }

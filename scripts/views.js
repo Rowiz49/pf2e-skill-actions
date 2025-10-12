@@ -53,8 +53,8 @@ export function renderActionSubsection(actor, html) {
  * @param {PF2EActor} actor
  */
 export function renderCreateActionButton(html, actor) {
-  let header = html.find("section[data-tab='proficiencies'] > header");
-
+  let header = html.find("section[data-tab='proficiencies'] > header").first();
+  
   if (header.length) {
     header.append(
       '<button type="button" class="automatic-action-creator"><span class="action-glyph">1</span></button>'
