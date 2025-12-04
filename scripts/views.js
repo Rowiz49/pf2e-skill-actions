@@ -53,7 +53,7 @@ export function renderActionSubsection(actor, html) {
  * @param {PF2EActor} actor
  */
 export function renderCreateActionButton(html, actor) {
-  let header = html.find("section[data-tab='proficiencies'] > header");
+  let header = html.find("section[data-tab='proficiencies'] header:first-child");
 
   if (header.length) {
     header.append(
