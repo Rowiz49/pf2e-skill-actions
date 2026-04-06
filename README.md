@@ -11,3 +11,4 @@ Adds a button to the proficiencies tab to add all the skill actions your charact
 # Usage
 
 In the proficiencies tab of your character sheet, click the new button with an action icon, it will add every skill action that the character doesn't have yet!
+The skill actions will be set in a separate section than your other action so that you don't have to scroll through tons of actions to get to the stuff you care most about.
