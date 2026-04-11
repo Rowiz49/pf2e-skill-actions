@@ -83,7 +83,7 @@ const actions = {
  */
 export async function addSkillActions(actor) {
   const skills = actor.system.skills;
-  console.log(skills);
+
   // Filter skills where rank is 1 (Trained) or higher
   const trainedSkills = Object.entries(skills)
     .filter(([key, skill]) => skill.rank >= 1)
