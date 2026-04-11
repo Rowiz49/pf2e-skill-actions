@@ -17,11 +17,11 @@ export function renderActionSubsection(actor, html) {
             <header class="action-header">` +
       game.i18n.localize("PF2ESKILLACTIONS.SkillActions") +
       `</header>
-    `
+    `,
   );
 
   let skillActionsList = $(
-    `<ol class="actions-list item-list directory-list"></ol>`
+    `<ol class="actions-list item-list directory-list"></ol>`,
   );
 
   actor.items
@@ -29,7 +29,7 @@ export function renderActionSubsection(actor, html) {
     .filter(
       (item) =>
         !item.system.traits.value.includes("downtime") &&
-        !item.system.traits.value.includes("exploration")
+        !item.system.traits.value.includes("exploration"),
     )
     .sort((a, b) => a.name.localeCompare(b.name))
     .forEach((action) => {
@@ -53,11 +53,13 @@ export function renderActionSubsection(actor, html) {
  * @param {PF2EActor} actor
  */
 export function renderCreateActionButton(html, actor) {
-  let header = html.find("section[data-tab='proficiencies'] > header").first();
-  
+  let header = html.find(
+    "section[data-tab='proficiencies'] header:first-child",
+  );
+
   if (header.length) {
     header.append(
-      '<button type="button" class="automatic-action-creator"><span class="action-glyph">1</span></button>'
+      '<button type="button" class="automatic-action-creator"><span class="action-glyph">1</span></button>',
     );
     header.find(".automatic-action-creator").on("click", () => {
       addSkillActions(actor);
