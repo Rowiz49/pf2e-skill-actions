@@ -25,7 +25,7 @@ export function renderActionSubsection(actor, html) {
   );
 
   actor.items
-    .filter((item) => item.flags["pf2e-skill-actions"])
+    .filter((item) => item.flags["pf2e-skill-actions"]?.added)
     .filter(
       (item) =>
         !item.system.traits.value.includes("downtime") &&

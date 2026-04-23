@@ -1,7 +1,8 @@
+import { getSelectedActions } from "./settings.js";
 /**
  * List of all skill actions
  */
-const actions = {
+export const actions = {
   untrained: [
     "long term rest",
     "retraining",
@@ -83,6 +84,7 @@ const actions = {
  */
 export async function addSkillActions(actor) {
   const skills = actor.system.skills;
+  const selected = getSelectedActions();
 
   // Filter skills where rank is 1 (Trained) or higher
   const trainedSkills = Object.entries(skills)
@@ -100,28 +102,27 @@ export async function addSkillActions(actor) {
   ui.notifications.info(
     game.i18n.localize("PF2ESKILLACTIONS.ListSkillsMessage") +
       " " +
-      trainedSkillsNames.join(", ")
+      trainedSkillsNames.join(", "),
   );
-  let skillActions = new Set(actions.untrained);
-  trainedSkills.forEach((skill) => {
-    skill = skill.toLowerCase();
-    if (actions[skill]) {
-      actions[skill].forEach((action) => {
-        skillActions.add(action);
-      });
-    }
-  });
+  const selectedSet = new Set(selected.map((s) => s.toLowerCase()));
+
+  let skillActions = new Set(
+    [
+      ...actions.untrained,
+      ...trainedSkills.flatMap((s) => actions[s] ?? []),
+    ].filter((action) => selectedSet.has(action.toLowerCase())),
+  );
 
   const existingActions = actor.items.filter((item) =>
-    skillActions.has((item.originalName ?? item.name)?.toLowerCase())
+    skillActions.has((item.originalName ?? item.name)?.toLowerCase()),
   );
 
   // Get only the missing actions (not already on actor)
   const missingActions = [...skillActions].filter(
     (slug) =>
       !existingActions.some(
-        (item) => (item.originalName ?? item.name)?.toLowerCase() === slug
-      )
+        (item) => (item.originalName ?? item.name)?.toLowerCase() === slug,
+      ),
   );
 
   if (missingActions.length === 0) {
@@ -134,7 +135,7 @@ export async function addSkillActions(actor) {
   const actionsToAdd = await Promise.all(
     missingActions.map(async (slug) => {
       const entry = index.find(
-        (e) => (e.originalName ?? e.name)?.toLowerCase() === slug
+        (e) => (e.originalName ?? e.name)?.toLowerCase() === slug,
       );
       if (!entry) return null;
 
@@ -147,7 +148,7 @@ export async function addSkillActions(actor) {
       newAction.flags["pf2e-skill-actions"] = { added: true };
 
       return newAction;
-    })
+    }),
   );
 
   // Remove null values
@@ -155,7 +156,7 @@ export async function addSkillActions(actor) {
   if (validActions.length > 0) {
     await actor.createEmbeddedDocuments("Item", validActions);
     ui.notifications.info(
-      game.i18n.localize("PF2ESKILLACTIONS.NumberAdded") + validActions.length
-    ) 
+      game.i18n.localize("PF2ESKILLACTIONS.NumberAdded") + validActions.length,
+    );
   }
 }
