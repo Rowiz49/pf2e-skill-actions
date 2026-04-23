@@ -1,3 +1,7 @@
+# 2.0.1
+
+- Enable all by default.
+
 # 2.0.0
 
 - Added a setting to choose which skill actions are automatically added.

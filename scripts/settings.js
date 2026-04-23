@@ -12,6 +12,13 @@ export function getAllActions() {
 
 export function getSelectedActions() {
   const stored = game.settings.get(MODULE, "selectedActions");
+
+  // First run: nothing stored yet → enable everything
+  if (stored === null || stored === undefined) {
+    return getAllActions();
+  }
+
+  // User choice (even empty) → respect it
   return stored;
 }
 
@@ -29,7 +36,7 @@ export function registerSettings() {
     scope: "client",
     config: false,
     type: Object,
-    default: [],
+    default: null, // <-- important to distinguish between no selection and first time setup});
   });
 }
 
