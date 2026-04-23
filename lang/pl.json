@@ -2,5 +2,6 @@
   "PF2ESKILLACTIONS.ListSkillsMessage": "Tworzenie akcji dla umiejętności wytrenowanych:",
   "PF2ESKILLACTIONS.AlreadyAdded": "Wszystkie akcje umiejętności zostały już dodane.",
   "PF2ESKILLACTIONS.NumberAdded": "Liczba dodanych akcji umiejętności:",
-  "PF2ESKILLACTIONS.SkillActions": "Akcje Umiejętności"
+  "PF2ESKILLACTIONS.SkillActions": "Akcje Umiejętności",
+  "PF2ESKILLACTIONS.ShowInSkillActions": "Pokaż w Akcjach Umiejętności"
 }
