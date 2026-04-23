@@ -1,6 +1,6 @@
 # 2.0.1
 
-- Enable all by default.
+- Enable all skill actions by default in the setting.
 
 # 2.0.0
 
