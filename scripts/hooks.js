@@ -17,6 +17,8 @@ Hooks.on("renderCreatureSheetPF2e", (sheet, html, sheetData) => {
 Hooks.on("renderItemSheetPF2e", (sheet, html, sheetData) => {
   const item = sheet.item;
 
+  const isReadOnly = !sheet.isEditable;
+
   // Only show on ability/action type items
   if (item.type !== "action") return;
 
@@ -35,6 +37,7 @@ Hooks.on("renderItemSheetPF2e", (sheet, html, sheetData) => {
           type="checkbox" 
           id="pf2e-skill-actions-flag"
           ${isChecked ? "checked" : ""}
+          ${isReadOnly ? "disabled" : ""}
         />
       </div>
     </div>
