@@ -1,3 +1,7 @@
+# 2.0.2
+
+- Improved actions localization handling, fixes [#23](https://github.com/Rowiz49/pf2e-skill-actions/issues/23)
+
 # 2.0.1
 
 - Enable all skill actions by default in the setting.
