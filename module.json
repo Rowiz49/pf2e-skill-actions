@@ -46,6 +46,11 @@
       "lang": "pl",
       "name": "Polish",
       "path": "lang/pl.json"
+    },
+    {
+      "lang": "it",
+      "name": "Italian",
+      "path": "lang/it.json"
     }
   ],
   "esmodules": ["scripts/hooks.js"],

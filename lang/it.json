@@ -1,0 +1,12 @@
+{
+  "PF2ESKILLACTIONS.ListSkillsMessage": "Creazione delle azioni per le abilità addestrate:",
+  "PF2ESKILLACTIONS.AlreadyAdded": "Tutte le azioni delle abilità sono già state aggiunte.",
+  "PF2ESKILLACTIONS.NumberAdded": "Numero di azioni delle abilità aggiunte:",
+  "PF2ESKILLACTIONS.SkillActions": "Azioni delle Abilità",
+  "PF2ESKILLACTIONS.ShowInSkillActions": "Mostra nelle Azioni delle Abilità",
+  "PF2ESKILLACTIONS.PreferencesSaved": "Preferenze delle azioni delle abilità salvate.",
+  "PF2ESKILLACTIONS.ConfigureActions": "Configura Azioni delle Abilità",
+  "PF2ESKILLACTIONS.ConfigureActionsHint": "Scegli quali azioni vengono aggiunte quando si utilizza il creatore automatico di azioni.",
+  "PF2ESKILLACTIONS.ConfigureActionsLabel": "Configura",
+  "PF2ESKILLACTIONS.Save": "Salva"
+}
