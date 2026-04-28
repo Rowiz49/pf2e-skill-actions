@@ -3,5 +3,10 @@
   "PF2ESKILLACTIONS.AlreadyAdded": "Todas las acciones de habilidad ya están añadidas",
   "PF2ESKILLACTIONS.NumberAdded": "Número de acciones de habilidad añadidas",
   "PF2ESKILLACTIONS.SkillActions": "Acciones de habilidad",
-  "PF2ESKILLACTIONS.ShowInSkillActions": "Mostrar en Acciones de habilidad"
+  "PF2ESKILLACTIONS.ShowInSkillActions": "Mostrar en Acciones de habilidad",
+  "PF2ESKILLACTIONS.PreferencesSaved": "Preferencias de acciones de habilidad guardadas",
+  "PF2ESKILLACTIONS.ConfigureActions": "Configurar acciones de habilidad",
+  "PF2ESKILLACTIONS.ConfigureActionsHint": "Elige qué acciones se añaden al usar el creador de acciones automático.",
+  "PF2ESKILLACTIONS.ConfigureActionsLabel": "Configurar",
+  "PF2ESKILLACTIONS.Save": "Guardar"
 }

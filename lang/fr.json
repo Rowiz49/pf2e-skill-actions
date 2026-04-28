@@ -3,5 +3,10 @@
   "PF2ESKILLACTIONS.AlreadyAdded": "Toutes les actions de compétence ont été ajoutées",
   "PF2ESKILLACTIONS.NumberAdded": "Numéro d'actions de compétences ajoutées:",
   "PF2ESKILLACTIONS.SkillActions": "Actions de compétence",
-  "PF2ESKILLACTIONS.ShowInSkillActions": "Afficher dans les actions de compétence"
+  "PF2ESKILLACTIONS.ShowInSkillActions": "Afficher dans les actions de compétence",
+  "PF2ESKILLACTIONS.PreferencesSaved": "Préférences d'actions de compétence enregistrées.",
+  "PF2ESKILLACTIONS.ConfigureActions": "Configurer les actions de compétence",
+  "PF2ESKILLACTIONS.ConfigureActionsHint": "Choisissez les actions à ajouter lors de l'utilisation du créateur d'actions automatique.",
+  "PF2ESKILLACTIONS.ConfigureActionsLabel": "Configurer",
+  "PF2ESKILLACTIONS.Save": "Enregistrer"
 }

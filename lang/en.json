@@ -3,5 +3,10 @@
   "PF2ESKILLACTIONS.AlreadyAdded": "All skill actions are already added.",
   "PF2ESKILLACTIONS.NumberAdded": "Number of skill actions added:",
   "PF2ESKILLACTIONS.SkillActions": "Skill Actions",
-  "PF2ESKILLACTIONS.ShowInSkillActions": "Show in Skill Actions"
+  "PF2ESKILLACTIONS.ShowInSkillActions": "Show in Skill Actions",
+  "PF2ESKILLACTIONS.PreferencesSaved": "Skill action preferences saved.",
+  "PF2ESKILLACTIONS.ConfigureActions": "Configure Skill Actions",
+  "PF2ESKILLACTIONS.ConfigureActionsHint": "Choose which actions are added when using the automatic action creator.",
+  "PF2ESKILLACTIONS.ConfigureActionsLabel": "Configure",
+  "PF2ESKILLACTIONS.Save": "Save"
 }

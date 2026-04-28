@@ -24,9 +24,9 @@ export function getSelectedActions() {
 
 export function registerSettings() {
   game.settings.registerMenu(MODULE, "actionSelection", {
-    name: "Configure Skill Actions",
-    label: "Configure",
-    hint: "Choose which actions are added when using the automatic action creator.",
+    name: game.i18n.localize("PF2ESKILLACTIONS.ConfigureActions"),
+    label: game.i18n.localize("PF2ESKILLACTIONS.ConfigureActionsLabel"),
+    hint: game.i18n.localize("PF2ESKILLACTIONS.ConfigureActionsHint"),
     icon: "fas fa-tasks",
     type: ActionSelectionForm,
     restricted: false,
@@ -44,7 +44,7 @@ class ActionSelectionForm extends ApplicationV2 {
   static DEFAULT_OPTIONS = {
     id: "pf2e-skill-actions-settings",
     window: {
-      title: "Skill Actions Selection",
+      title: game.i18n.localize("PF2ESKILLACTIONS.ConfigureActions"),
     },
     position: {
       width: 480,
@@ -106,7 +106,7 @@ class ActionSelectionForm extends ApplicationV2 {
       </div>
       <footer class="sheet-footer flexrow" style="margin-top: 8px; padding: 8px;">
         <button type="button" data-action="save">
-          <i class="fas fa-save"></i> Save
+          <i class="fas fa-save"></i> ${game.i18n.localize("PF2ESKILLACTIONS.Save")}
         </button>
       </footer>
     `;
@@ -138,7 +138,9 @@ class ActionSelectionForm extends ApplicationV2 {
 
     await game.settings.set(MODULE, "selectedActions", selected);
 
-    ui.notifications.info("Skill action preferences saved.");
+    ui.notifications.info(
+      game.i18n.localize("PF2ESKILLACTIONS.PreferencesSaved"),
+    );
     this.close();
   }
 }
