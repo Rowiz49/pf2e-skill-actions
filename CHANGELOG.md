@@ -1,3 +1,8 @@
+# 2.0.3
+
+- Added italian localization.
+- Expand localization to cover the whole module.
+
 # 2.0.2
 
 - Improved actions localization handling, fixes [#23](https://github.com/Rowiz49/pf2e-skill-actions/issues/23)
