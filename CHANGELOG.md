@@ -1,3 +1,7 @@
+# 2.0.4
+
+- Fix Settings localization load order
+
 # 2.0.3
 
 - Added italian localization.

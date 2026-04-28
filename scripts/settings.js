@@ -41,27 +41,29 @@ export function registerSettings() {
 }
 
 class ActionSelectionForm extends ApplicationV2 {
-  static DEFAULT_OPTIONS = {
-    id: "pf2e-skill-actions-settings",
-    window: {
-      title: game.i18n.localize("PF2ESKILLACTIONS.ConfigureActions"),
-    },
-    position: {
-      width: 480,
-      height: "auto",
-    },
-    actions: {
-      selectAll: function () {
-        this.selectAll();
+  static get defaultOptions() {
+    return mergeObject(super.defaultOptions, {
+      id: "pf2e-skill-actions-settings",
+      window: {
+        title: game.i18n.localize("PF2ESKILLACTIONS.ConfigureActions"),
       },
-      deselectAll: function () {
-        this.deselectAll();
+      position: {
+        width: 480,
+        height: "auto",
       },
-      save: function () {
-        this.save();
+      actions: {
+        selectAll: function () {
+          this.selectAll();
+        },
+        deselectAll: function () {
+          this.deselectAll();
+        },
+        save: function () {
+          this.save();
+        },
       },
-    },
-  };
+    });
+  }
 
   async _prepareContext(_options) {
     return { selected: getSelectedActions() };
