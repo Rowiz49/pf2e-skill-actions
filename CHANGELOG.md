@@ -1,3 +1,8 @@
+# 2.0.5
+
+- Updated Polish (thanks @Lioheart !)
+
+
 # 2.0.4
 
 - Fix Settings localization load order
