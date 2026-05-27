@@ -3,10 +3,10 @@
   "PF2ESKILLACTIONS.AlreadyAdded": "Wszystkie akcje umiejętności zostały już dodane.",
   "PF2ESKILLACTIONS.NumberAdded": "Liczba dodanych akcji umiejętności:",
   "PF2ESKILLACTIONS.SkillActions": "Akcje Umiejętności",
-  "PF2ESKILLACTIONS.ShowInSkillActions": "Pokaż w Akcjach Umiejętności",
-  "PF2ESKILLACTIONS.PreferencesSaved": "Preferencje akcji umiejętności zostały zapisane.",
-  "PF2ESKILLACTIONS.ConfigureActions": "Konfiguruj Akcje Umiejętności",
-  "PF2ESKILLACTIONS.ConfigureActionsHint": "Wybierz, które akcje są dodawane podczas korzystania z automatycznego kreatora akcji.",
-  "PF2ESKILLACTIONS.ConfigureActionsLabel": "Konfiguruj",
+  "PF2ESKILLACTIONS.ShowInSkillActions": "Pokaż w akcjach umiejętności",
+  "PF2ESKILLACTIONS.PreferencesSaved": "Zapisano preferencje dotyczące akcji umiejętności.",
+  "PF2ESKILLACTIONS.ConfigureActions": "Skonfiguruj akcje umiejętności",
+  "PF2ESKILLACTIONS.ConfigureActionsHint": "Wybierz, jakie akcje mają być dodane podczas korzystania z narzędzia do automatycznego tworzenia akcji.",
+  "PF2ESKILLACTIONS.ConfigureActionsLabel": "Konfiguracja",
   "PF2ESKILLACTIONS.Save": "Zapisz"
 }

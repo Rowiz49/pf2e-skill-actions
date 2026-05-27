@@ -1,6 +1,10 @@
+# 2.0.6
+
+- Fix action handling for ApplicationV2 in settings, fixes [#25](https://github.com/Rowiz49/pf2e-skill-actions/issues/25)
+
 # 2.0.5
 
-- Fix action handling for ApplicationV2 in settings (#25)
+- Updated Polish (thanks @Lioheart!)
 
 # 2.0.4
 
