@@ -1,3 +1,7 @@
+# 2.0.5
+
+- Fix action handling for ApplicationV2 in settings (#25)
+
 # 2.0.4
 
 - Fix Settings localization load order
